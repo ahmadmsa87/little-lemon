@@ -36,7 +36,7 @@ export default function Footer() {
     <footer>
       <img src={Logo} alt="Little lemon logo" />
       <div className="footer-navigation">
-        <div>Page Navigations</div>
+        <div className="footer-section-title">Page Navigations</div>
         <ul>
           <li>
             <a href="#">Home</a>
@@ -59,7 +59,7 @@ export default function Footer() {
         </ul>
       </div>
       <div className="footer-contact">
-        <div>Contact</div>
+        <div className="footer-section-title">Contact</div>
         <ul>
           <li>
             <FontAwesomeIcon icon={faLocationDot} size="1x" />
@@ -77,7 +77,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-social-media">
-        <div>Social Media</div>
+        <div className="footer-section-title">Social Media</div>
         <ul>
           {socials.map((item) => {
             return (
