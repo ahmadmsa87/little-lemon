@@ -10,7 +10,8 @@ import {
   faInstagram,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import Logo from "../Assets/Logo/Logo.png";
+import Logo from "../../assets/logo/logo.png";
+import "./Footer.css";
 
 const socials = [
   {
@@ -34,7 +35,7 @@ export default function Footer() {
   return (
     <footer>
       <img src={Logo} alt="Little lemon logo" />
-      <div>
+      <div className="footer-navigation">
         <div>Page Navigations</div>
         <ul>
           <li>
@@ -57,7 +58,7 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="footer-contact">
         <div>Contact</div>
         <ul>
           <li>
@@ -75,7 +76,7 @@ export default function Footer() {
         </ul>
       </div>
 
-      <div>
+      <div className="footer-social-media">
         <div>Social Media</div>
         <ul>
           {socials.map((item) => {
@@ -90,7 +91,7 @@ export default function Footer() {
         </ul>
       </div>
 
-      <div>
+      <div className="copyright">
         <p>© 2023 Little Lemon Ltd. All rights reserved.</p>
       </div>
     </footer>

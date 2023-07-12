@@ -1,0 +1,38 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 10vw;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 150px 1fr;
+    /* grid-auto-flow: column; */
+    grid-template-areas: "logo nav" "social contact" "copyright copyright";
+}
+
+footer img,
+.footer-navigation,
+.footer-contact,
+.footer-social-media,
+.copyright {
+    display: inline-block;
+}
+
+footer img {
+    grid-area: logo;
+}
+
+.footer-navigation {
+    grid-area: nav;
+}
+
+.footer-contact {
+    grid-area: social;
+}
+
+.footer-social-media {
+    grid-area: contact;
+}
+
+.copyright {
+    grid-area: copyright;
+}
