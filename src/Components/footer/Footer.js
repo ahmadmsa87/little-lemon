@@ -14,6 +14,7 @@ import Nav from "../navigation/Nav";
 import Logo from "../../assets/logo/footer-logo.png";
 import "./Footer.css";
 import NavUrls from "../../components/navigation/NavUrls";
+import { NavLink } from "react-router-dom";
 
 const socials = [
   {
@@ -36,7 +37,9 @@ const socials = [
 export default function Footer() {
   return (
     <footer>
-      <img src={Logo} alt="Little lemon logo" />
+      <NavLink to="/">
+        <img src={Logo} alt="Little lemon logo" />
+      </NavLink>
       <div className="footer-navigation">
         <div className="footer-section-title">Page Navigations</div>
         <nav>
