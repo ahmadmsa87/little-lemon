@@ -1,3 +1,4 @@
+import React from "react";
 import Cuisine from "../../assets/images/cuisine3.jpeg";
 import "./Wrapper.css";
 

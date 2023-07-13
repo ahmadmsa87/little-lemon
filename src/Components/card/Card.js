@@ -13,7 +13,7 @@ export default function SpecialCard(props) {
           <h3>{props.price}</h3>
         </div>
         <p>{props.description}</p>
-        <NavLink to="/reservations">
+        <NavLink to="/order">
           <button className="btn">
             <span>Order for Delivery &nbsp;&nbsp;</span>
             <FontAwesomeIcon icon={faMotorcycle} />

@@ -10,7 +10,7 @@ export default function SpecialDishes() {
     <section className="special-dishes">
       <article className="special-top-section">
         <h1>This weeks specials</h1>
-        <NavLink to="/reservations">
+        <NavLink to="/order">
           <button className="btn">Online Menu</button>
         </NavLink>
       </article>
