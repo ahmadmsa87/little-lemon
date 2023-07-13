@@ -1,8 +1,10 @@
 import React from "react";
 import "./Reservation.css";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { fetchAPI, submitAPI } from "../../services/Reservation";
 
 const schema = yup.object({
   name: yup.string().required("Full name field is a required!"),
@@ -27,6 +29,13 @@ const schema = yup.object({
 });
 
 export default function ReservationForm() {
+  const navigate = useNavigate();
+  function updateTimes(state, action) {
+    return state;
+  }
+
+  const [availableTimes, dispatch] = React.useReducer(updateTimes, []);
+
   const {
     handleSubmit,
     register,
@@ -35,7 +44,21 @@ export default function ReservationForm() {
     resolver: yupResolver(schema),
   });
 
-  const formSubmit = (data) => {};
+  React.useEffect(() => {
+    const availavle_times = fetchAPI(new Date());
+    if (availavle_times.length > 0)
+      dispatch({ type: "update", availavle_times });
+  }, []);
+
+  const formSubmit = (data) => {
+    submitAPI(data)
+      .then(() => {
+        navigate("/confirmation");
+      })
+      .catch(() => {
+        navigate("/confirmation");
+      });
+  };
 
   return (
     <form onSubmit={handleSubmit(formSubmit)}>
@@ -73,8 +96,21 @@ export default function ReservationForm() {
           <span className="error-msg">{errors.telephone?.message}</span>
         </div>
         <div className="form-field">
-          <label htmlFor="date">Date & Time *</label>
-          <input type="datetime-local" name="date" {...register("date")} />
+          <label htmlFor="date">Date *</label>
+          <input type="date" name="date" {...register("date")} />
+          <span className="error-msg">{errors.date?.message}</span>
+        </div>
+        <div className="form-field">
+          <label htmlFor="time">Time *</label>
+          <div className="options">
+            <select name="time" {...register("Time")}>
+              <option value="None">Select Time</option>
+              {availableTimes.length > 0 &&
+                availableTimes.map((time) => {
+                  return <option value={time}>{time}</option>;
+                })}
+            </select>
+          </div>
           <span className="error-msg">{errors.date?.message}</span>
         </div>
         <div className="form-field guest-field">
