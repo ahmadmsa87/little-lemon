@@ -1,0 +1,24 @@
+.main-wrapper {
+    position: relative;
+    text-align: center;
+    margin-bottom: -1.4rem;
+    overflow: hidden;
+}
+
+.wrapper-header {
+    width: 100vw;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.wrapper-header-text {
+    background-color: #495e57;
+    color: #fff;
+    padding: 1rem 3rem 1rem 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    border-radius: 0.5rem;
+}

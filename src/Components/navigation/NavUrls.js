@@ -14,7 +14,9 @@ export default function NavUrls() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="#">Menu</NavLink>
+        <NavLink to="/menu" className="active-link">
+          Menu
+        </NavLink>
       </li>
       <li>
         <NavLink to="/reservations" className="active-link">
@@ -22,10 +24,14 @@ export default function NavUrls() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="#">Order Online</NavLink>
+        <NavLink to="/order" className="active-link">
+          Order Online
+        </NavLink>
       </li>
       <li>
-        <NavLink to="#">Login</NavLink>
+        <NavLink to="/login" className="active-link">
+          Login
+        </NavLink>
       </li>
     </ul>
   );

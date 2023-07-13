@@ -20,5 +20,6 @@ nav .mobile-menu {
         background: #fff;
         width: 100%;
         border: 1px solid #495E57;
+        z-index: 1;
     }
 }
