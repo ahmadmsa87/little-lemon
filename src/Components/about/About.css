@@ -1,7 +1,7 @@
 .about-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 3.25rem 5rem 3.5rem 5rem;
+    padding: 3.25rem 60px 5.50rem 60px;
     grid-gap: 25vw;
     background-color: #f4ce14;
     min-height: 22rem;
@@ -39,4 +39,15 @@
     position: relative;
     top: 0;
     left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .about-section {
+        padding: 3.25rem 30px 3.50rem 30px;
+        grid-gap: 2vw;
+    }
+
+    .about-image {
+        left: 0.9rem;
+    }
 }

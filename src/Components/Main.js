@@ -1,3 +1,3 @@
-export default function Main() {
-  return <main>Main</main>;
+export default function Main(props) {
+  return <main>{props.children}</main>;
 }

@@ -1,0 +1,9 @@
+.testimonial-card {
+    background-color: #edefee;
+    padding: 1rem 1rem 0 1rem;
+    height: 22rem;
+}
+
+.testimonial-card h3 {
+    padding: 2rem 0 1rem;
+}

@@ -1,0 +1,41 @@
+.card {
+    background-color: #edefee;
+    padding-bottom: 1rem;
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 3rem;
+}
+
+.card>img {
+    height: 25vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.card-text {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+.card-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+}
+
+.card-header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.card-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    padding-top: 7px;
+}
+
+.card-text p {
+    padding-top: 10px;
+    padding-bottom: 25px;
+}

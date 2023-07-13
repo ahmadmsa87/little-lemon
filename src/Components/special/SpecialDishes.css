@@ -1,0 +1,43 @@
+.special-dishes {
+    padding: 7rem 5rem 0 5rem;
+    animation-duration: 0.33s;
+    animation-timing-function: ease-in-out;
+    animation-name: slideDownFade;
+}
+
+.special-top-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.special-top-section>h1 {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.special-top-section>a {
+    text-align: right;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2vw;
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+        grid-gap: 2vw;
+    }
+
+    .special-dishes {
+        padding: 2rem 2rem 0 2rem;
+    }
+}
