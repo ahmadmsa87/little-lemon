@@ -72,7 +72,11 @@ export default function ReservationForm() {
           />
           <span className="error-msg">{errors.telephone?.message}</span>
         </div>
-
+        <div className="form-field">
+          <label htmlFor="date">Date & Time *</label>
+          <input type="datetime-local" name="date" {...register("date")} />
+          <span className="error-msg">{errors.date?.message}</span>
+        </div>
         <div className="form-field guest-field">
           <label htmlFor="guests">Number of guests *</label>
           <input
@@ -84,11 +88,6 @@ export default function ReservationForm() {
           <span className="error-msg">{errors.guests?.message}</span>
         </div>
 
-        <div className="form-field">
-          <label htmlFor="date">Date & Time *</label>
-          <input type="datetime-local" name="date" {...register("date")} />
-          <span className="error-msg">{errors.date?.message}</span>
-        </div>
         <div className="form-field occasion-field">
           <label htmlFor="occasion">Occasion</label>
           <div className="options">
