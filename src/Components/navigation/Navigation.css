@@ -1,0 +1,24 @@
+nav .mobile-menu {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    nav .mobile-menu {
+        display: block;
+    }
+
+    nav .desktop-menu {
+        display: none;
+    }
+
+    nav .mobile-menu ul {
+        position: absolute;
+        margin-top: 19px;
+        right: 0;
+        display: grid;
+        background: #fff;
+        width: 100%;
+        border: 1px solid #495E57;
+    }
+}

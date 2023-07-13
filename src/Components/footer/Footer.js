@@ -10,8 +10,10 @@ import {
   faInstagram,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import Logo from "../../assets/logo/logo.png";
+import Nav from "../navigation/Nav";
+import Logo from "../../assets/logo/footer-logo.png";
 import "./Footer.css";
+import NavUrls from "../../components/navigation/NavUrls";
 
 const socials = [
   {
@@ -37,26 +39,9 @@ export default function Footer() {
       <img src={Logo} alt="Little lemon logo" />
       <div className="footer-navigation">
         <div className="footer-section-title">Page Navigations</div>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Menu</a>
-          </li>
-          <li>
-            <a href="#">Reservations</a>
-          </li>
-          <li>
-            <a href="#">Order Online</a>
-          </li>
-          <li>
-            <a href="#">Login</a>
-          </li>
-        </ul>
+        <nav>
+          <NavUrls />
+        </nav>
       </div>
       <div className="footer-contact">
         <div className="footer-section-title">Contact</div>
@@ -92,7 +77,7 @@ export default function Footer() {
       </div>
 
       <div className="copyright">
-        <p>© 2023 Little Lemon Ltd. All rights reserved.</p>
+        <p>© 2023 Little Lemon. All rights reserved.</p>
       </div>
     </footer>
   );

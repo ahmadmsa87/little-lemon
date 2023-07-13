@@ -1,7 +1,7 @@
 footer {
-    background-color: #333;
+    background-color: #495e57;
     color: #fff;
-    padding: 35px 15vw;
+    padding: 35px 13vw;
     display: grid;
     grid-template-areas: "logo nav social contact" "copyright copyright copyright copyright";
 }
@@ -17,10 +17,15 @@ footer img,
 
 footer img {
     grid-area: logo;
+    max-width: 8rem;
 }
 
 .footer-navigation {
     grid-area: nav;
+}
+
+.footer-navigation ul li .active-link.active {
+    color: #F4CE14
 }
 
 .footer-contact {
@@ -58,6 +63,8 @@ footer div p {
     font-size: 20px;
     font-weight: 500;
 }
+
+
 
 @media screen and (max-width: 768px) {
     footer {
